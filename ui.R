@@ -27,8 +27,10 @@ ui <- dashboardPage(
               fluidRow(
                 column(width = 12,
                        myBox_green(width = 3,
-                                   tags$a(imageOutput("penguins", height = "150px"),
-                                          href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", target="_blank")
+                                   tags$a(
+                                     imageOutput("penguins", height = "150px"),
+                                     href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", 
+                                     target="_blank")
                        ))
                  ),
               fluidRow(
@@ -57,6 +59,7 @@ ui <- dashboardPage(
                 column(width = 6, align = "center",
                        div(style = "height:200px;",
                            gauge_plot_UI("sex"))),
+                
                 column(width = 6, align = "center",
                        div(style = "height:200px;",
                            gauge_plot_UI("island")))
@@ -70,47 +73,17 @@ ui <- dashboardPage(
                        p("of penguins were male",
                          style = "font-size:20px;text-align:center;color:white")),
                 column(width = 6,
-                       p("of penguins were observed \n on Torgerson Island",
+                       p("of penguins were observed \n on Torgersen Island",
                          style = "font-size:20px;text-align:center;color:white"))
               )
       ),
       
       # Tab two ----
-      tabItem(tabName = "genderdiffs",
-              fluidRow(
-                column(width = 12,
-                       myBox_green(width = 3,
-                                   tags$a(imageOutput("penguins", height = "50px"),
-                                          href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", target="_blank")
-                       ))
-              ),
-              fluidRow(
-                myBox_green(width = 12, height = 15)
-              ),
-              
-              fluidRow(
-                myBox_green(width = 12, height = 8,
-                            background = "#2A9D8F"
-                ))
+      tabItem(tabName = "genderdiffs"
               ),
       
       #Tab three ----
-      tabItem(tabName = "speciesdiffs",
-              fluidRow(
-                column(width = 12,
-                       myBox_green(width = 3,
-                                   tags$a(imageOutput("penguins", height = "50px"),
-                                          href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", target="_blank")
-                       ))
-              ),
-              fluidRow(
-                myBox_green(width = 12, height = 15)
-              ),
-              
-              fluidRow(
-                myBox_green(width = 12, height = 8,
-                            background = "#2A9D8F"
-                ))
+      tabItem(tabName = "speciesdiffs"
               )
       
     

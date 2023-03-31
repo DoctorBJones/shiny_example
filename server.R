@@ -14,15 +14,8 @@ server <- function(input, output) {
          alt = "Palmer penguins R package hex sticker")
   }, deleteFile = FALSE) 
   
-  gauge_plot_server("sex", 0.51)
+  gauge_plot_server("sex", 0.504)
   
   gauge_plot_server("island", 0.15)
-  
-  
-  
-   # break
-  observe({
-    if (input$close > 0) stopApp()                             # stop shiny
-  })
   
 }
