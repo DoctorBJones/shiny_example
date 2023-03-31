@@ -1,0 +1,13 @@
+name: Penguins
+title:
+username:
+account: bethanyjones
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8729034
+bundleId: 7032188
+url: https://bethanyjones.shinyapps.io/Penguins/
+when: 1680255554.78463
+lastSyncTime: 1680255554.78465
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,73 @@
+
+/* font */
+* {
+  font-family: "Helvetica";
+}
+
+/* logo */
+.skin-blue .main-header .logo {
+                     background-color: #264653;
+}
+                  
+/* logo when hovered */
+.skin-blue .main-header .logo:hover {
+                     background-color: #264653;
+}
+                  
+/* navbar (rest of the header) */
+.skin-blue .main-header .navbar {
+                     background-color: #264653;
+}
+                  
+/* main sidebar */
+.skin-blue .main-sidebar {
+                     background-color: #264653;
+}
+                  
+/* active selected tab in the sidebarmenu */
+.skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
+                     background-color: #E76F51;
+                     border-left-color: #E76F51;
+}
+
+/* hover active selected tab in the sidebarmenu */
+.skin-blue .main-sidebar .sidebar .sidebar-menu .active:hover a{
+                     background-color: #E76F51;
+                     border-left-color: #E76F51;
+
+}
+                  
+/* other links in the sidebarmenu */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a{
+                     background-color: #264653;
+                     color: #ffffff;
+}
+                  
+/* other links in the sidebarmenu when hovered */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a:hover{
+                     background-color: #264653;
+                     border-left-color: #E76F51;
+}
+
+/* toggle button when hovered  */
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+                     background-color: #264653;
+                     border-left-color: #E76F51;
+}
+                  
+/* body */
+.content-wrapper{
+  background-color: #264653;
+}
+
+
+.skin-blue .wrapper {
+    background-color: #264653;
+}
+
+
+.body {
+  background-color: #264653;
+  color: #264653;
+}
+  
