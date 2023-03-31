@@ -25,14 +25,14 @@ ui <- dashboardPage(
       # Tab one ----
       tabItem(tabName = "Homepage",
               fluidRow(
-                column(width = 12,
-                       myBox_green(width = 3,
-                                   tags$a(
-                                     imageOutput("penguins", height = "150px"),
-                                     href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", 
-                                     target="_blank")
-                       ))
-                 ),
+                myBox_green(width = 3,
+                            tags$a(
+                              imageOutput("penguins", height = "150px"),
+                              href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", 
+                              target="_blank")
+                       )
+                ),
+                 
               fluidRow(
                 myBox_green(width = 12, height = 15)
                 ),
