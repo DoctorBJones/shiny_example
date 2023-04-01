@@ -1,6 +1,6 @@
 # This module creates a scatterplot where the user can select inputs from a 
 # list of continuous variables. It is disaggregated by a single factor variable
-# that is hard coded.
+# that is soft coded by not selected by the user.
 
 
 
@@ -32,9 +32,8 @@ scatter_UI <- function(id, continuous_vars) {
 }
 
 #module server
-# To use the server function you only need to pass the dataset. However, if you
-# want to change the disaggregation you need to do it in the code below as it
-# is hard coded.
+# To use the server function you need to pass the dataset and the variable you
+# wish to disaggregate by. 
 scatter_server <- function(id, dataset, disaggregate) {
   moduleServer(id, function(input, output, session){
     
