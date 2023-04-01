@@ -10,7 +10,7 @@ ui <- dashboardPage(
   dashboardSidebar(id = "",
                    sidebarMenu(
                      menuItem("Homepage", tabName = "Homepage"),
-                     menuItem("Gender differences", tabName = "genderdiffs"),
+                     menuItem("Sex differences", tabName = "sexdiffs"),
                      menuItem("Species differences", tabName = "speciesdiffs")
                    )),
   
@@ -80,7 +80,7 @@ ui <- dashboardPage(
       ),
       
       # Tab two ----
-      tabItem(tabName = "genderdiffs",
+      tabItem(tabName = "sexdiffs",
               fluidRow(
                 myBox_green(width = 12,
                             p("Sex difference in penguins",
@@ -98,7 +98,13 @@ ui <- dashboardPage(
               ),
       
       #Tab three ----
-      tabItem(tabName = "speciesdiffs"
+      tabItem(tabName = "speciesdiffs",
+              fluidRow(
+                myBox_green(width = 12,
+                            p("Species difference in penguins",
+                              style = "font-size:42px;test-align:center"))
+                
+              ),
               )
       
     

@@ -9,12 +9,12 @@ means_by_factor_UI <- function(id, continuous_vars) {
     myBox_green(width = 4,
                 varSelectInput(
                   inputId = NS(id, "yaxis"),
-                  label = "Select a variable to compare between sexes",
+                  label = "Select a variable to compare means between sexes",
                   data = continuous_vars,
                   multiple = FALSE
                 )),
     myBox_green(width = 8,
-                plotlyOutput(NS(id,"scatter")))
+                plotlyOutput(NS(id,"bar")))
   )
 }
 
@@ -22,22 +22,20 @@ means_by_factor_UI <- function(id, continuous_vars) {
 means_by_factor_server <- function(id, dataset) {
   moduleServer(id, function(input, output, session){
     
-    output$scatter <- renderPlotly({
+    output$bar <- renderPlotly({
       
       plot_data <- penguins |>
-        filter(! is.na(Sex)) |>
-        group_by(Sex) |>
-        summarise(Mean = mean(input$yaxis))
+        filter(! is.na(Sex)) 
       
       # setting color as well as fill gets rid of weird lines on rendering
-      p <- ggplot(dataset, aes_string(x = "Sex", y = input$yaxis, 
+      p <- ggplot(plot_data, aes_string(x = "Sex", y = input$yaxis, 
                                       fill = "Sex", color = "Sex")) +
-          geom_bar(stat = "identity") +
+          geom_bar(stat = "summary", fun = "mean") +
           scale_fill_bj(reverse = TRUE) +
           scale_color_bj(reverse = TRUE) +
           theme_bj_vbar() 
         
-      ggplotly(p)
+      ggplotly(p, tooltip = "y")
       
       
     })
