@@ -19,10 +19,15 @@ server <- function(input, output) {
   gauge_plot_server("island", 0.15)
   
   # Sex differences tab
-  scatter_server("sex", penguins)
+  scatter_server("sex", penguins, "Sex")
   
   means_by_factor_server("means_by_sex", penguins)
   
   # Species difference tab
+  
+  violin_by_factor_server("species", penguins)
+  
+  scatter_server("species_scatter", penguins, "Species")
+  
   
 }

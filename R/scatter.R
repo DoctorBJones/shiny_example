@@ -35,7 +35,7 @@ scatter_UI <- function(id, continuous_vars) {
 # To use the server function you only need to pass the dataset. However, if you
 # want to change the disaggregation you need to do it in the code below as it
 # is hard coded.
-scatter_server <- function(id, dataset) {
+scatter_server <- function(id, dataset, disaggregate) {
   moduleServer(id, function(input, output, session){
     
     output$scatter <- renderPlotly({
@@ -44,9 +44,10 @@ scatter_server <- function(id, dataset) {
       
       if (input$smooth_line == "Show regression line") {
         
-        p <- ggplot(dataset, aes_string(x = input$xaxis, y = input$yaxis, colour = "Sex")) +
+        p <- ggplot(dataset, aes_string(x = input$xaxis, y = input$yaxis, 
+                                        colour = disaggregate, group = disaggregate)) +
           geom_point(position = "jitter", size = 0.5) +
-          geom_smooth(method = "lm", colour = bj_cols("Text Grey")) +
+          geom_smooth(method = "lm") +
           scale_color_bj() +
           theme_bj_numeric() %+replace%
           theme(
@@ -55,7 +56,7 @@ scatter_server <- function(id, dataset) {
         
       } else if (input$smooth_line == "Don't show regression line") {
         
-        p <- ggplot(dataset, aes_string(x = input$xaxis, y = input$yaxis, colour = "Sex")) +
+        p <- ggplot(dataset, aes_string(x = input$xaxis, y = input$yaxis, colour = disaggregate)) +
           geom_point(position = "jitter", size = 0.5) +
           scale_color_bj() +
           theme_bj_numeric() %+replace%

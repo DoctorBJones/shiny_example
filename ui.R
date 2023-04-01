@@ -105,6 +105,14 @@ ui <- dashboardPage(
                               style = "font-size:42px;test-align:center"))
                 
               ),
+              fluidRow(width = 12,
+                       violin_by_factor_UI("species", cont_vars)
+                       
+              ),
+              fluidRow(width = 12,
+                       scatter_UI("species_scatter", cont_vars)
+                       
+              )
               )
       
     
