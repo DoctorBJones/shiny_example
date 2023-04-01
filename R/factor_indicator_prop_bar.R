@@ -62,8 +62,8 @@ factor_indicator_prop_bar_server <- function(id, dataset, weights = NULL, stat =
       
       p <- ggplot(plot_data, aes(x = Group, y = Percentage, fill = Group)) +
         geom_bar(stat = "identity") +
-        scale_fill_BETA() +
-        theme_BETA() %+replace%
+        scale_fill_bj() +
+        theme_bj_vbar() %+replace%
         theme(
           axis.line.x = element_blank(),
           legend.position = "none",

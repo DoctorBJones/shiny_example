@@ -46,11 +46,11 @@ multi_indicator_bar_server <- function(id, dataset, weights = NULL, stat = "prop
       p <- ggplot(df, aes(y = reorder(Var1, Percentage), x = Percentage)) +
         geom_bar(stat = "identity", fill = BETA_colours("Chart Mid Blue"))+
         scale_y_discrete(labels = wrap_format(40)) +
-        theme_BETA() %+replace%
+        theme_bj_hbar() %+replace%
         theme(
-          axis.line.y = element_blank(),
-          axis.ticks.y.left = element_blank(),
-          axis.text.y = element_text(hjust = 1),
+          # axis.line.y = element_blank(),
+          # axis.ticks.y.left = element_blank(),
+          # axis.text.y = element_text(hjust = 1),
           axis.text =element_text(size = 10),
           axis.title=element_text(size=10)
         ) +

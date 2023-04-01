@@ -52,8 +52,9 @@ ui <- dashboardPage(
                               at the Palmer station in Antarctica. With Allison 
                               Horst and Alison Hill she made the data publicly
                               available through the palmerpenguins R package. 
-                              This web app explores the data as a
-                              demonstration of Shiny.", style = "font-size:20px"))
+                              Bethany Jones created this web app to explore the 
+                              data as a demonstration of Shiny.", 
+                              style = "font-size:20px"))
               ),
               fluidRow(
                 column(width = 6, align = "center",
@@ -73,13 +74,27 @@ ui <- dashboardPage(
                        p("of penguins were male",
                          style = "font-size:20px;text-align:center;color:white")),
                 column(width = 6,
-                       p("of penguins were observed \n on Torgersen Island",
+                       p("of penguins were observed", tags$br(), "on Torgersen Island",
                          style = "font-size:20px;text-align:center;color:white"))
               )
       ),
       
       # Tab two ----
-      tabItem(tabName = "genderdiffs"
+      tabItem(tabName = "genderdiffs",
+              fluidRow(
+                myBox_green(width = 12,
+                            p("Sex difference in penguins",
+                              style = "font-size:42px;test-align:center"))
+                
+              ),
+              fluidRow(width = 12,
+                       scatter_UI("sex", cont_vars)
+                
+              ),
+              fluidRow(width = 12,
+                       means_by_factor_UI("means_by_sex", cont_vars)
+                       
+              )
               ),
       
       #Tab three ----
