@@ -25,7 +25,7 @@ server <- function(input, output) {
   
   # Species difference tab
   
-  violin_by_factor_server("species", penguins)
+  violin_boxplot_factor_server("species", penguins)
   
   scatter_server("species_scatter", penguins, "Species")
   

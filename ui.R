@@ -106,7 +106,7 @@ ui <- dashboardPage(
                 
               ),
               fluidRow(width = 12,
-                       violin_by_factor_UI("species", cont_vars)
+                       violin_boxplot_factor_UI("species", cont_vars)
                        
               ),
               fluidRow(width = 12,
