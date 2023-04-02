@@ -83,8 +83,15 @@ ui <- dashboardPage(
       tabItem(tabName = "sexdiffs",
               fluidRow(
                 myBox_green(width = 12,
-                            p("Sex difference in penguins",
+                            p("Sex differences in penguins",
                               style = "font-size:42px;test-align:center"))
+                
+              ),
+              fluidRow(
+                myBox_green(width = 12,
+                            p("Click on the legends to add or remove groups", tags$br(),
+                              "Hover over the graphs to display details",
+                              style = "font-size:20px"))
                 
               ),
               fluidRow(width = 12,
@@ -101,9 +108,16 @@ ui <- dashboardPage(
       tabItem(tabName = "speciesdiffs",
               fluidRow(
                 myBox_green(width = 12,
-                            p("Species difference in penguins",
+                            p("Species differences in penguins",
                               style = "font-size:42px;test-align:center"))
                 
+              ),
+              fluidRow(
+                myBox_green(width = 12,
+                       p("Click on the legends to add or remove groups", tags$br(),
+                         "Hover over the graphs to display details",
+                         style = "font-size:20px"))
+                       
               ),
               fluidRow(width = 12,
                        violin_boxplot_factor_UI("species", cont_vars)
