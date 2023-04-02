@@ -1,6 +1,6 @@
 
 theme_bj_numeric <- function() {
-  font <- "sans"
+  font <- "Helvetica"
   font_colour <- "#3f3f3f"
   
   ggplot2::theme_minimal() %+replace%
@@ -71,7 +71,7 @@ theme_bj_numeric <- function() {
 
 
 theme_bj_vbar <- function() {
-  font <- "sans"
+  font <- "Helvetica"
   font_colour <- "#3f3f3f"
   
   ggplot2::theme_minimal() %+replace%
@@ -145,7 +145,7 @@ theme_bj_vbar <- function() {
 
 
 theme_bj_hbar <- function() {
-font <- "sans"
+font <- "Helvetica"
 font_colour <- "#3f3f3f"
 
 ggplot2::theme_minimal() %+replace%
