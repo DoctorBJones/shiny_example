@@ -10,7 +10,7 @@ server <- function(input, output) {
   
   # palmerpenguins hex sticker
   output$penguins <- renderImage({
-    list(src = "www/palmerpenguins.png", style = "height:150px", contentType = "image/png", 
+    list(src = "www/palmerpenguins.png", style = "height:250px", contentType = "image/png", 
          alt = "Palmer penguins R package hex sticker")
   }, deleteFile = FALSE) 
   

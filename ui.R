@@ -25,13 +25,18 @@ ui <- dashboardPage(
       # Tab one ----
       tabItem(tabName = "Homepage",
               fluidRow(
-                myBox_green(width = 3,
+                column(width = 3,
+                       myBox_green(width = 3,
                             tags$a(
-                              imageOutput("penguins", height = "150px"),
+                              imageOutput("penguins", height = "250px"),
                               href = "https://allisonhorst.github.io/palmerpenguins/articles/intro.html", 
                               target="_blank")
-                       )
-                ),
+                       )),
+                column(width = 6, 
+                       myBox_green(width = 9,
+                            title = h1("Penguins of the Antarctic",
+                                       style = "font-size:70px;text-align: center")))
+              ),
                  
               fluidRow(
                 myBox_green(width = 12, height = 15)
@@ -41,11 +46,11 @@ ui <- dashboardPage(
                 myBox_green(width = 12, height = 8,
                             background = "#2A9D8F"
                 )),
+              
               fluidRow(
-                myBox_green(width = 12,
-                            title = h1("Penguins of the Antarctic",
-                                       style = "font-size:40px;text-align: center"))
+                myBox_green(width = 12, height = 50)
               ),
+              
               fluidRow(
                 myBox_green(width = 12,
                             p("Dr Kristen Gorman collected data on penguins
