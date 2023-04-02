@@ -65,7 +65,7 @@ scatter_server <- function(id, dataset, disaggregate) {
         
       }
       
-      ggplotly(p)
+      ggplotly(p, tooltip = c("x", "y", "colour"))
       
       
     })

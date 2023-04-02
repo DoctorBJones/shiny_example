@@ -32,7 +32,7 @@ violin_by_factor_server <- function(id, dataset) {
         scale_color_bj(reverse = TRUE) +
         theme_bj_vbar() 
       
-      ggplotly(p)
+      ggplotly(p, tooltip = "x")
       
       
     })
